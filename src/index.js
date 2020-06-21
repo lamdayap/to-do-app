@@ -1,5 +1,6 @@
 import { startApp } from './app.js'
 import { createTask } from './board.js'
+import css from './style.css'
 startApp();
 
 const newCounter = (() => {
@@ -11,7 +12,7 @@ const newCounter = (() => {
     return {addOne}
 })()
 
-document.querySelector(".btn").addEventListener('click', () => {
+document.querySelector(".add-btn").addEventListener('click', () => {
     let count = newCounter.addOne()
     const task = document.querySelector('.form-control')
     createTask(task.value, count)
